@@ -1,0 +1,27 @@
+body{
+    background: #eee;
+    padding-left: 15px;
+}
+
+#my-canvas{
+    border: 3px solid darkblue;
+    cursor: pointer;
+}
+
+
+form{
+    display: flex;
+}
+
+form *{
+    padding: 20px;
+}
+
+.btns-canvs{
+    display: flex;
+}
+
+.btns-canvs *{
+    padding: 20px;
+
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mister-Canvas</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="init()">
+    <h1>Mr. Canvas</h1>
+    <section>
+        <form>
+            <p>Select a color:</p>
+            <input type="color" onchange="onUpdategColor(this.value)">
+            <p>Select a shape:</p>
+            <select name="shape" onchange="onUpdategShape(this.value)">
+                <option value="rect">Rectangle</option>
+                <option value="triangle">Triangle</option>
+                <option value="line">Line</option>
+                <option value="circle">Circle</option>
+            </select>
+        </form>
+    </section>
+</br>
+    <div class="btns-canvs">
+        <img class="img">
+        <button onclick=onClearCanvas()>Clear canvas</button>
+        <a href="#" class="btn" onclick="onDownloadImg(this)" download="my-img.jpg">Download as jpeg</a>
+        <button>Share</button>
+    </div>
+</br>
+    <canvas id="my-canvas" width="1000" height="500" onmousedown="onMouseDown(event)" onmouseup="onMouseUp()"
+        onmousemove="onCanvasDraw(event)" ontouchstart="onMouseDown(event)" ontouchend="handleTouch(event)"
+        ontouchmove="handleTouch(event)"></canvas>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/service-mister-canvas.js"></script>
+
+</body>
+
+</html>
